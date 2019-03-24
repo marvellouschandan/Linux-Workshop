@@ -1,55 +1,57 @@
-# Welcome Folks! Now you are on my page where I am going to have my complete documentation of my Linux-Workshop. So, let's get started.
+### Welcome Folks! Now you are on my page where I am going to have my complete documentation of my Linux-Workshop. So, let's get started.<br><br>
 ---
 
-## Day 0 : An Awesome Day With Linux!
-
-### Why learn Linux?
+# Day 0 : An Awesome Day With Linux!
+<br>
+## Why learn Linux?
 
 A: I can give you many reasons to learn linux:
 
-	+ Open-source nature, i.e save you lots of money.
+	* Open-source nature, i.e save you lots of money.
 
-	+ Secure
+	* Secure
 
-	+ No requirement of Antivirus!
+	* No requirement of Antivirus!
 
-	+ It can revive your old computers
+	* It can revive your old computers
 
-	+ Used for hosting
+	* Used for hosting
 
-	+ Perfect choice for Programmers
+	* Perfect choice for Programmers
 
-	+ Terminal is superior than Windows cmd
+	* Terminal is superior than Windows cmd
 
-	+ Great support from developers and community!
+	* Great support from developers and community!
 
-	+ Software updates
+	* Software updates
 
-	+ Customization as per user choice
+	* Customization as per user choice
 
-	+ Variety of available distributions
+	* Variety of available distributions
 
-	+ Reliability
+	* Reliability
 
-	+ Almost all supercomputers run on linux
+	* Almost all supercomputers run on linux
 
-	+ Respects your Privacy
+	* Respects your Privacy
 
-
+<br>
 ---
-### Career in linux?
+## Career in linux?
 
 
 A: Linux is not limited by its use only but one can plan his/her career with Linux:
 
-	+ Linux system administrator
+	* Linux system administrator
 
-	+ DevOps
+	* DevOps
 
-	+ Cyber Security Expert
+	* Cyber Security Expert
 
-	+ Network Administrator
+	* Network Administrator
 
-	+ Hackers and many more..
-
+	* Hackers and many more..
+<br>
 ---
+
+## Step-by-Step compilation of C Program:
