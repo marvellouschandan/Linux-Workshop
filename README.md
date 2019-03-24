@@ -58,6 +58,6 @@ A: Linux is not limited by its use only but one can plan his/her career with Lin
 
 Since this workshop consists of 3 days, I have divided the content of each day in three sections:
 
-* [https://marvellouschandan.github.io/Linux-Workshop/Day0.html](Day 0)
-* [https://marvellouschandan.github.io/Linux-Workshop/Day0.html](Day 1)
-* [https://marvellouschandan.github.io/Linux-Workshop/Day0.html](Day 2)
+* [Day 0](https://marvellouschandan.github.io/Linux-Workshop/Day0.html)
+* [Day 1](https://marvellouschandan.github.io/Linux-Workshop/Day0.html)
+* [Day 2](https://marvellouschandan.github.io/Linux-Workshop/Day0.html)
