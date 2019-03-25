@@ -1,3 +1,4 @@
+# Day 0 : An Awesome Day With Linux!
 ## Step-by-Step compilation of C Program:
 
 As per I believe compilation of C Program is not a very tedious task. But the step-by-step compilation I believe could be done and viewed on Linux very easily.

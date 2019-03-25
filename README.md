@@ -1,9 +1,8 @@
 ### Welcome Folks! Now you are on my page where I am going to have my complete documentation of my Linux-Workshop. So, let's get started.<br><br>
 ---
 
-# Day 0 : An Awesome Day With Linux!
 <br>
-## Why learn Linux?
+# Why learn Linux?
 
 A: I can give you many reasons to learn linux:
 
@@ -37,7 +36,7 @@ A: I can give you many reasons to learn linux:
 
 <br>
 ---
-## Career in linux?
+# Career in linux?
 
 
 A: Linux is not limited by its use only but one can plan his/her career with Linux:
