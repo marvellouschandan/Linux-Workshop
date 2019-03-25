@@ -211,16 +211,32 @@ e.g-
 touch (1)            - change file timestamps
 touch (1p)           - change file access and modification times
 ```bash
+	$ touch textfile.txt
 	$ touch test{1, 2, 3}.txt
 ```
 
 #### cat:
 cat (1)              - concatenate files and print on the standard output
 cat (1p)             - concatenate and print files
+e.g-
+```bash
+	$ cat textfile.txt
+	$ cat -n textfile.txt  # Show line numbers
+	$ cat > test.txt  # create file with initial input
+	$ cat textfile.txt | more
+	$ cat textfile.txt | less
+	$ cat test test1 test2 > test3
+```
+
 
 #### less:
 less (1)             - opposite of more
 less (3perl)         - perl pragma to request less of something
+
+e.g-
+```bash
+	$ less test.txt
+```
 
 #### more:
 more (1)             - file perusal filter for crt viewing
@@ -235,14 +251,31 @@ e.g-more can move forwards and backwards in text files but cannot move backwards
 head (1)             - output the first part of files
 head (1p)            - copy the first part of files
 
+e.g-
+```bash
+	$ head textfile.txt
+	$ head -n 15 textfile.txt  # Show top 15 lines
+```
+
 #### tail:
 tail (1)             - output the last part of files
 tail (1p)            - copy the last part of a file
+
+e.g-
+```bash
+	$ tail textfile.txt
+	$ tail -n 15 textfile.txt  # Show bottom 15 lines
+```
 
 #### pwd:
 pwd (n)              - Return the absolute path of the current working directory
 pwd (1)              - print name of current/working directory
 pwd (1p)             - return working directory name
+
+e.g-
+```bash
+	$ pwd
+```
 
 #### mkdir:
 mkdir (2)            - create a directory
@@ -321,6 +354,10 @@ find (1p)            - find files
 ps (1p)              - report process status
 ps (1)               - report a snapshot of the current processes.
 
+```bash
+	$ ps aux | grep vlc
+```
+
 #### ssh:
 ssh (1)              - OpenSSH SSH client (remote login program)
 
@@ -330,18 +367,40 @@ uname (1)            - print system information
 uname (1p)           - return system name
 uname (3p)           - get the name of the current system
 
+e.g-
+```bash
+	$ uname -a  # print all information
+	$ uname -r  # kernel release
+	$ uname -v  # kernel version
+```
+
 #### hostname:
 hostname (7)         - hostname resolution description
 hostname (1)         - show or set system host name
 hostname (5)         - Local hostname configuration file
+
+e.g-
+```bash
+	$ hostname
+```
 
 #### free:
 free (1)             - Display amount of free and used memory in the system
 free (3)             - allocate and free dynamic memory
 free (3p)            - free allocated memory
 
+e.g-
+```bash
+	$ free -m
+```
+
 #### whoami:
 whoami (1)           - print effective userid
+
+e.g-
+```bash
+	$ whoami
+```
 
 #### useradd:
 useradd (8)          - create a new user or update default new user information
@@ -353,28 +412,71 @@ kill (1)             - terminate a process
 kill (1p)            - terminate or signal processes
 kill (3p)            - send a signal to a process or a group of processes
 
+e.g-
+```
+	$ kill 9981
+	$ kill -9 9981
+```
+
 #### ip:
 ip (8)               - show / manipulate routing, network devices, interfaces and tunnels
 ip (7)               - Linux IPv4 protocol implementation
 
+e.g-
+```bash
+	$ ip a
+```
+
 #### ifconfig:
-ifconfig: nothing appropriate.
+ifconfig: 			 - Networking tool
+
+e.g-
+```bash
+	$ ifconfig eth0
+```
 
 #### ping:
 ping (8)             - send ICMP ECHO_REQUEST to network hosts
 
-#### whois:
-whois: nothing appropriate.
+e.g-
+```bash
+	$ ping google.com
+```
 
 #### tar:
 tar (1)              - an archiving utility
 tar (5)              - format of tape archive files
+
+e.g-
+```
+	* c – create a archive file.
+	* x – extract a archive file.
+	* v – show the progress of archive file.
+	* f – filename of archive file.
+	* t – viewing content of archive file.
+	* z – filter archive through gzip.
+```
+
+```bash
+	$ tar -cvf MyImages-14-09-12.tar.gz /home/MyImages  # Create tar Archive File
+	$ tar -cvzf MyImages-14-09-12.tar.gz /home/MyImages  # Create tar.gz Archive File
+	$ tar -xvf public_html-14-09-12.tar  # Untar tar, tar.gz, tar.bz2 Archive File
+	$ tar -xvf public_html-14-09-12.tar -C /home/public_html/videos/  # Untar files in specified Directory
+	$ tar -tvf uploadprogress.tar  # List Content of tar, tar.gz, tar.bz2 Archive File
+	$ tar -xvf cleanfiles.sh.tar cleanfiles.sh  # Untar Single file from tar File
+	$ tar -zxvf tecmintbackup.tar.gz tecmintbackup.xml  # Untar Single file from tar.gz File
+```
 
 #### rmdir:
 rmdir (2)            - delete a directory
 rmdir (1)            - remove empty directories
 rmdir (1p)           - remove directories
 rmdir (3p)           - remove a directory
+
+e.g-
+```bash
+	$ rmdir foldername
+```
 
 ### Package management:
 ```bash
