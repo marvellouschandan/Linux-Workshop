@@ -20,6 +20,23 @@ There are four steps to compile a C program:
 
 4. Linking
 
+First have a look at out program-
+```c
+
+#include <stdio.h>  // Included Library
+
+// Defining macros
+#define num1 5
+#define num2 10
+#define sum(a, b) (a+b)
+
+int main()
+{
+	printf("Sum of %d and %d is %d", num1, num2, sum(num1, num2));
+	return 0;
+}
+```
+
 Let's see each step one-by-one:
 ### 1. Preprocessing-
 
@@ -43,6 +60,36 @@ Let’s see what’s inside sample_code.i: using
 ```bash
 	$vi sample_code.i 
 ```
+Here output seems as-
+```c
+# 1 "sample_code.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 31 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 32 "<command-line>" 2
+# 1 "sample_code.c"
+# 1 "/usr/include/stdio.h" 1 3 4
+# 27 "/usr/include/stdio.h" 3 4
+# 1 "/usr/include/bits/libc-header-start.h" 1 3 4
+# 33 "/usr/include/bits/libc-header-start.h" 3 4
+# 1 "/usr/include/features.h" 1 3 4
+# 428 "/usr/include/features.h" 3 4
+# 1 "/usr/include/sys/cdefs.h" 1 3 4
+# 442 "/usr/include/sys/cdefs.h" 3 4
+# 1 "/usr/include/bits/wordsize.h" 1 3 4
+
+<SNIP>
+
+# 8 "sample_code.c"
+int main()
+{
+ printf("Sum of %d and %d is %d", 5, 10, (5 +10));
+ return 0;
+}
+
+```
+
 
 In the above output, source file is filled with lots and lots of info, but at the end our code is preserved.
 Analysis:
@@ -59,7 +106,42 @@ The next step is to compile sample_code.i and produce an; intermediate compiled 
 
 Let’s see through this file using 
 ```bash
-	$vi sample_code.
+	$vi sample_code.s
+```
+
+Output now is-
+```
+	.file	"sample_code.c"
+	.text
+	.section	.rodata
+.LC0:
+	.string	"Sum of %d and %d is %d"
+	.text
+	.globl	main
+	.type	main, @function
+main:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$15, %ecx
+	movl	$10, %edx
+	movl	$5, %esi
+	leaq	.LC0(%rip), %rdi
+	movl	$0, %eax
+	call	printf@PLT
+	movl	$0, %eax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	main, .-main
+	.ident	"GCC: (GNU) 8.2.1 20181127"
+	.section	.note.GNU-stack,"",@progbits
 ```
 
 ### 3. Assembly-
@@ -72,6 +154,9 @@ Let’s view this file using vim-
 ```bash
 $vi sample_code.o
 ```
+![Image](ImagesDay0/1.png)
+
+We can view there is the printf function which hasn't been linked till now and is to be linked in the next step.
 
 ### 4. Linking-
 This is the final phase in which all the linking of function calls with their definitions are done. Linker knows where all these functions are implemented. Linker does some extra work also, it adds some extra code to our program which is required when the program starts and ends. For example, there is a code which is required for setting up the environment like passing command line arguments. This task can be easily verified by using $size sample_code.o and $size sample_code. Through these commands, we know that how output file increases from an object file to an executable file. This is because of the extra code that linker adds with our program.
@@ -85,6 +170,12 @@ Now let's run this code-
 	$ ./sample_code
 ```
 
+And now I believe you are confortable with the compilation process of a C Program.
+
+> To get the all intermediate files in the current directory along with the executable, do the following-
+```bash
+	$ gcc –Wall –save-temps sample_code.c –o sample_code 
+```
 ---
 
 ## Basic Linux Commands-
