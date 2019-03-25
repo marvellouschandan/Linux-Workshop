@@ -91,13 +91,35 @@ Now let's run this code-
 ls (1)               - list directory contents
 ls (1p)              - list directory contents
 
+e.g-
+```bash
+	$ ls -l  # - is a file, d is a directory, l is a symbolic file, x is executable
+	$ ls -a  # Concept of hidden files
+	$ ls -al
+	$ ls -r  # List in reverse name
+	$ ls -t  # List new files
+	$ ls -rt  # old first
+```
+
 #### cd:
 cd (n)               - Change working directory
 cd (1p)              - change the working directory
 
+e.g-
+```bash
+	$ cd ~
+	$ cd /
+	$ cd -
+	$ cd .
+	$ cd ..
+```
+
 #### touch:
 touch (1)            - change file timestamps
 touch (1p)           - change file access and modification times
+```bash
+	$ touch test{1, 2, 3}.txt
+```
 
 #### cat:
 cat (1)              - concatenate files and print on the standard output
@@ -110,6 +132,11 @@ less (3perl)         - perl pragma to request less of something
 #### more:
 more (1)             - file perusal filter for crt viewing
 more (1p)            - display files on a page-by-page basis
+
+e.g-more can move forwards and backwards in text files but cannot move backwards in pipes.
+```bash
+	$ more test.txt
+```
 
 #### head:
 head (1)             - output the first part of files
@@ -129,18 +156,40 @@ mkdir (2)            - create a directory
 mkdir (1)            - make directories
 mkdir (1p)           - make directories
 mkdir (3p)           - make a directory relative to directory file descriptor
+e.g-
+```bash
+	$ mkdir folder
+	$ mkdir -p ~/Desktop/a/b/c
+```
 
 #### cp:
 cp (1)               - copy files and directories
 cp (1p)              - copy files
+e.g-
+```bash
+	$ cp test.txt ~/Documents/newname.txt
+	$ cp -i  # Override or not
+	$ cp -r folder-inside-folder/
+```
 
 #### mv:
 mv (1)               - move (rename) files
 mv (1p)              - move files
+e.g-
+```bash
+	$ mv -i file.txt ~/Desktop/
+	$ mv -v file.txt newname.txt  # Rename a file
+```
 
 #### rm:
 rm (1)               - remove files or directories
 rm (1p)              - remove directory entries
+e.g-
+```bash
+	$ rm -r folder-inside-folder
+	$ rm -i file  # Remove interactively
+	$ rm -rf folder  # Remove folder recursively and files forcefully
+```
 
 #### wget:
 wget (1)             - The non-interactive network downloader.
@@ -148,6 +197,11 @@ wget (1)             - The non-interactive network downloader.
 #### date:
 date (1)             - print or set the system date and time
 date (1p)            - write the date and time
+
+e.g-
+```bash
+	$ date +'%d/%m/%y %H:%M:%S'
+```
 
 #### cal:
 cal (1)              - display a calendar
@@ -228,3 +282,15 @@ rmdir (2)            - delete a directory
 rmdir (1)            - remove empty directories
 rmdir (1p)           - remove directories
 rmdir (3p)           - remove a directory
+
+### Package management:
+```bash
+	$ sudo apt-get install filezilla
+	$ sudo apt-get remove filezilla
+	$ sudo apt-get purge filezilla
+	$ sudo apt-cache search filezilla
+	$ sudo apt-cache show filezilla
+	$ sudo apt-get update  # Resynchronize sources
+	$ sudo apt-get upgrade  # Upgrade all packages to newest version
+	$ sudo apt-get dist-upgrade  # Also upgrade dependencies
+```
