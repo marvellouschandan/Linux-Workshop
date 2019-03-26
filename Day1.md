@@ -1,4 +1,4 @@
-# Git | Version Control Software:
+# Git! Version Control Software:
 
 Hey Folks! Congratulations on finishing your Day 0, and today I am going to introduce a tool named Git.
 

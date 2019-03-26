@@ -63,3 +63,4 @@ Since this workshop consists of 3 days, I have divided the content of each day i
 
 # Course Instructors:
 * [Chandan Kumar](https://github.com/marvellouschandan)
+* [Suraj Dadral](https://github.com/SurajDadral)
