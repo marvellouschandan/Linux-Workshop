@@ -22,17 +22,19 @@ Above picture gives a very clear idea of how Git works!
 
 But before we dive into actual Git, let's introduce ourselves with some of the **jargons**:
 
-* Repository-  The purpose of Git is to manage a project, or a set of files, as they change over time. Git stores this information in a data structure called a repository.
+* **Repository**-  The purpose of Git is to manage a project, or a set of files, as they change over time. Git stores this information in a data structure called a repository.
 
 > About the .git folder inside the git repository: This is a hidden .git folder inside your current folder where git stores all of its internal tracking data.
 
 Git has two repository types: 
 
-1. Local Repo- The local repo is on your computer for only your direct use. It has all the files and their commit history, enabling full diffs, history review, and committing when offline.  This is one of the key features of a “distributed” version control system (DVCS), locally having the full repository history.
+1. **Local Repo**- The local repo is on your computer for only your direct use. It has all the files and their commit history, enabling full diffs, history review, and committing when offline.  This is one of the key features of a “distributed” version control system (DVCS), locally having the full repository history.
 
-2. Remote Repo- The remote repo is typically elsewhere and for your indirect use. Git refers to the centralized server as a “remote repository”.  The remote repo is usually not on your machine and is the one shared by the team. The team “pushes” commits to it when ready to share with the team.
+2. **Remote Repo**- The remote repo is typically elsewhere and for your indirect use. Git refers to the centralized server as a “remote repository”.  The remote repo is usually not on your machine and is the one shared by the team. The team “pushes” commits to it when ready to share with the team.
 
-* Clone a Repository-
+* **Fork**- It means to make a copy of the repository (the one being forked) into your account (the account from which you're forking).
+
+* **Clone a Repository**-
 The clone command creates a new local repo from the remote repo.  Use this command only once to initially pull the files and history from the remote repo.
 
 Let's clone a repo-
@@ -41,17 +43,19 @@ Let's clone a repo-
 ```
 > The URL you specify here is called the **remote origin** (the place where the files were originally downloaded from).
 
-* Add / Stage- The add or stage command adds the file in its current state to the Git stage area.
+* **Add / Stage**- The add or stage command adds the file in its current state to the Git stage area.
 
-* Commits- The commit command commits the staged files to the local repo. Commits are a particular type of checkpoint called a **revision**. The name will be a random-looking hash of numbers and letters such as `e093542`.
+* **Commits**- The commit command commits the staged files to the local repo. Commits are a particular type of checkpoint called a **revision**. The name will be a random-looking hash of numbers and letters such as `e093542`.
 
-* Fetch- The fetch command retrieves updated files from the remote repo that are not yet in your local repo.
+* **Fetch**- The fetch command retrieves updated files from the remote repo that are not yet in your local repo.
 
-* Merge- The merge command merges the contents from the local repo into the workspace.
+* **Merge**- The merge command merges the contents from the local repo into the workspace.
 
-* Pull- The pull command is simply a fetch followed by a merge.
+* **Pull**- The pull command is simply a fetch followed by a merge.
 
-* HEAD- HEAD always refers to your latest checkpoint, that is, the latest commit on your current branch.
+* **HEAD**- HEAD always refers to your latest checkpoint, that is, the latest commit on your current branch.
+
+* **Branch**- A git branch symbolic reference to a single git commit. Branches in Git are nothing but pointers to a specific commit. Git generally prefers to keep its branches as lightweight as possible.
 
 So, I feel that now we are clear with the terminologies and let's start implementing it.
 
@@ -60,8 +64,8 @@ So, I feel that now we are clear with the terminologies and let's start implemen
 ## Real life example:
 Here’s a series of commands that could hypothetically be executed while developing a real feature:
 ```bash
-	$ git clone https://github.com/cooperka/emoji-commit-messages.git
-	$ cd emoji-commit-messages
+	$ git clone https://github.com/marvellouschandan/Linux-Workshop
+	$ cd Linux-Workshop
 	$ git status
 	$ git checkout -b my-new-feature
 	$ echo “This is a cool new file” > my-file.txt
