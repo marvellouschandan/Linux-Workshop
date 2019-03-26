@@ -34,8 +34,10 @@ A: I can give you many reasons to learn linux:
 
 	* Respects your Privacy
 
-<br>
+
 ---
+<br>
+
 # Career in linux?
 
 
@@ -51,8 +53,9 @@ A: Linux is not limited by its use only but one can plan his/her career with Lin
 
 	* Hackers and many more..
 	
-<br>
 ---
+
+<br>
 
 # Course Details:
 
