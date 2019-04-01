@@ -63,7 +63,7 @@ Since this workshop consists of 3 days, I have divided the content of each day i
 
 * [Day 0 : An Awesome Day With Linux!](https://marvellouschandan.github.io/Linux-Workshop/Day0.html)
 * [Day 1 : Git! A Version Control Software](https://marvellouschandan.github.io/Linux-Workshop/Day1.html)
-* [Day 2 : Power of VIM Editor](https://marvellouschandan.github.io/Linux-Workshop/Day0.html)
+* [Day 2 : Power of VIM Editor](https://github.com/marvellouschandan/vim-cheatsheet/blob/master/README.md)
 
 # Course Instructors:
 * [Chandan Kumar](https://github.com/marvellouschandan)
